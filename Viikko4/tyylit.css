@@ -1,0 +1,164 @@
+body {
+  background-color: #000;
+  overflow: hidden;
+}
+#pollo {
+  display: none;
+}
+
+rect {
+  width: 10%;
+}
+
+.palkki {
+  position: absolute;
+  left: -20%;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  animation-name: palkkiLiuku;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  z-index: 1;
+}
+
+canvas {
+  z-index: 2;
+}
+
+.scroller {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-name: scrollaa;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  z-index: 3;
+}
+
+#pingviini1 {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  animation-name: pingviini1anim;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 3s;
+  left: calc(100% - 150px);
+  top: calc(100% - 150px);
+}
+
+#pingviini2 {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  animation-name: pingviini2anim;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 3s;
+  left: 0;
+  top: 0;
+}
+
+#canvas0 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation-name: vasenYla;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 5s;
+}
+
+#canvas1 {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  transform: translateX(-100%);
+  animation-name: oikeeYla;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 5s;
+}
+#canvas2 {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  transform: translateY(-100%);
+  animation-name: vasenAla;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 5s;
+}
+#canvas3 {
+  position: absolute;
+  left: 100%;
+  top: 100%;
+  transform: translate(-100%, -100%);
+  animation-name: oikeeAla;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 5s;
+}
+
+@keyframes scrollaa {
+  0% {
+    transform: translate(-50%, 100vh);
+  }
+  100% {
+    transform: translate(-50%, calc(0vh - 100%));
+  }
+}
+
+@keyframes pingviini1anim {
+  50% {
+    transform: translate(calc(-50vw + 50%), calc(-100vh + 100%));
+  }
+  100% {
+    transform: translate(calc(-100vw + 100%), 0vh);
+  }
+}
+
+@keyframes pingviini2anim {
+  50% {
+    transform: translate(calc(50vw - 50%), calc(100vh - 100%));
+  }
+  100% {
+    transform: translate(calc(100vw - 100%), 0vh);
+  }
+}
+
+@keyframes vasenYla {
+  40%,
+  60% {
+    transform: translate(calc(50vw - 100%), calc(50vh - 100%));
+  }
+}
+@keyframes oikeeYla {
+  40%,
+  60% {
+    transform: translate(-50vw, calc(50vh - 100%));
+  }
+}
+@keyframes vasenAla {
+  40%,
+  60% {
+    transform: translate(calc(50vw - 100%), -50vh);
+  }
+}
+@keyframes oikeeAla {
+  40%,
+  60% {
+    transform: translate(-50vw, -50vh);
+  }
+}
+
+@keyframes palkkiLiuku {
+  0%,
+  100% {
+    transform: translate(-10vw);
+  }
+  50% {
+    transform: translate(130vw);
+  }
+}

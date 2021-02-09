@@ -1,0 +1,37 @@
+body {
+  margin: 1%;
+}
+#tupa {
+  float: right;
+  border: 1px solid black;
+  margin: 1em;
+  padding: 0.5em;
+  min-height: 10em;
+}
+form {
+  overflow: hidden;
+}
+fieldset {
+  width: 250px;
+  padding: 2%;
+  display: inline;
+}
+
+.labelRasti {
+  display: block;
+  margin: 10px;
+}
+
+input {
+  float: right;
+}
+
+button {
+  margin-top: 10px;
+}
+
+select {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
