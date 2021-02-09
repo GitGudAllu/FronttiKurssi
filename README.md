@@ -1,1 +1,3 @@
 # FronttiKurssi
+
+Kurssilla toteutettuja tehtäviä.
